@@ -1,0 +1,25 @@
+{
+  "name": "compro-cv.nisfi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Company profile website for CV. NISFI NASBAR with Supabase auth and admin management.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "nextjs",
+    "supabase",
+    "company-profile"
+  ],
+  "author": "CV. NISFI NASBAR",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/ssr": "^0.10.2",
+    "@supabase/supabase-js": "^2.105.1",
+    "next": "^16.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  }
+}
