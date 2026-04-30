@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { LayoutDashboard, LogOut, Settings2 } from "lucide-react";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
 
 export default function AuthControls() {
@@ -23,6 +24,7 @@ export default function AuthControls() {
       const {
         data: { user },
       } = await supabase.auth.getUser();
+
       if (!isMounted) return;
       setIsAuthenticated(Boolean(user));
       setIsLoading(false);
@@ -50,30 +52,47 @@ export default function AuthControls() {
 
   if (!supabase) {
     return (
-      <Link href="/auth" className="btn btn-outline btn-small">
+      <Link
+        href="/auth"
+        className="inline-flex items-center gap-2 rounded-full border border-lime-200 bg-lime-50 px-4 py-2 text-sm font-medium text-lime-700 transition hover:bg-lime-100"
+      >
+        <Settings2 className="h-4 w-4" />
         Configure Supabase
       </Link>
     );
   }
 
   if (isLoading) {
-    return <span className="nav-note">Checking session...</span>;
+    return <span className="hidden text-sm text-slate-500 lg:inline">Checking session...</span>;
   }
 
   if (!isAuthenticated) {
     return (
-      <Link href="/auth" className="btn btn-outline btn-small">
+      <Link
+        href="/auth"
+        className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-lime-300 hover:text-lime-700"
+      >
+        <LayoutDashboard className="h-4 w-4" />
         Login / Register
       </Link>
     );
   }
 
   return (
-    <div className="auth-inline">
-      <Link href="/admin" className="btn btn-outline btn-small">
+    <div className="flex items-center gap-2">
+      <Link
+        href="/admin"
+        className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-lime-300 hover:text-lime-700"
+      >
+        <LayoutDashboard className="h-4 w-4" />
         Admin Panel
       </Link>
-      <button type="button" onClick={handleLogout} className="btn btn-light btn-small">
+      <button
+        type="button"
+        onClick={handleLogout}
+        className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-red-200 hover:text-red-600"
+      >
+        <LogOut className="h-4 w-4" />
         Logout
       </button>
     </div>

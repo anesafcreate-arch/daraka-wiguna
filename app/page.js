@@ -1,203 +1,222 @@
 import Link from "next/link";
+import {
+  ArrowRight,
+  Building2,
+  MessageCircleMore,
+  PanelsTopLeft,
+  Trees,
+} from "lucide-react";
+import Reveal from "@/components/reveal";
+import { company, homeHighlights, services } from "@/lib/site-data";
+import rumahTropis from "@/picture/rumah_tropis.png";
 
-const services = [
-  "Building Construction",
-  "Glass & Aluminum Houses",
-  "Wallpaper Partitions",
-  "Painting",
-  "Kitchen Sets",
-  "Electrical Installation",
-  "Air Conditioning",
-  "Gardening",
-];
-
-const advantages = [
-  {
-    title: "Experienced Field Team",
-    description: "Handled by practical workers with real project experience from start to finish.",
-  },
-  {
-    title: "Transparent Work Stages",
-    description: "Clear scope, material planning, and ongoing updates during execution.",
-  },
-  {
-    title: "Quality & Durability Focus",
-    description: "Neat workmanship and durable material recommendations for long-term value.",
-  },
-  {
-    title: "Fast Response Consultation",
-    description: "Quick coordination through WhatsApp for survey, quotation, and scheduling.",
-  },
-];
-
-const portfolioItems = [
-  { src: "/portfolio/minimalis.jpg", title: "Residential Build & Facade Work" },
-  { src: "/portfolio/portfolio-2.jpg", title: "Modern Glass & Aluminum Installation" },
-  { src: "/portfolio/portfolio-3.jpg", title: "Interior Finishing and Kitchen Set" },
-  { src: "/portfolio/portfolio-4.jpg", title: "Painting and Wallpaper Partition" },
-  { src: "/portfolio/portfolio-5.jpg", title: "Electrical and AC Setup" },
-  { src: "/portfolio/portfolio-6.jpg", title: "Landscape and Gardening Area" },
+const briefServices = [
+  { title: services[0].title, text: services[0].description, icon: Building2 },
+  { title: services[3].title, text: services[3].description, icon: PanelsTopLeft },
+  { title: services[9].title, text: services[9].description, icon: Trees },
 ];
 
 export default function HomePage() {
   return (
-    <main>
-      <section id="home" className="hero">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow">Trusted Partner In Bogor Regency</p>
-            <h1>Professional Construction & Property Finishing Services</h1>
-            <p>
-              CV. NISFI NASBAR delivers practical, modern, and well-executed solutions for homes and
-              commercial properties, from structural work to final detail finishing.
-            </p>
-            <div className="hero-actions">
-              <Link className="btn btn-primary" href="/#contact">
-                Free Consultation
-              </Link>
-              <Link className="btn btn-light" href="/#services">
-                Explore Services
-              </Link>
+    <>
+      <section className="pt-8 sm:pt-10">
+        <div className="page-frame">
+          <div className="relative min-h-[640px] overflow-hidden rounded-[36px] border border-slate-200/80 shadow-[0_30px_80px_rgba(15,23,42,0.22)]">
+            <div className="absolute inset-0">
+              <img
+                src={rumahTropis.src}
+                alt="Rumah tropis modern"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-slate-950/28"></div>
+            </div>
+
+            <div className="relative z-10 flex min-h-[640px] items-end p-4 sm:p-8 lg:p-10">
+              <div className="soft-panel w-full rounded-[32px] bg-white/96 p-5 text-slate-900 sm:p-8 lg:p-10">
+                <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+                  <Reveal className="space-y-7">
+                    <p className="surface-label">
+                      <span className="lime-dot"></span>
+                      Beranda
+                    </p>
+                    <div className="space-y-5">
+                      <h1 className="font-display max-w-4xl text-4xl font-semibold leading-none tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+                        Professional Construction & Interior Website
+                      </h1>
+                      <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+                        {company.name} menghadirkan solusi konstruksi, interior, utilitas, dan landscape
+                        dengan pendekatan minimal, modern, dan terasa premium sejak kesan pertama.
+                      </p>
+                    </div>
+
+                    <div className="grid gap-4 sm:grid-cols-3">
+                      {homeHighlights.map((item, index) => (
+                        <div
+                          key={item}
+                          className="rounded-3xl border border-slate-200 bg-white px-4 py-4 text-sm leading-7 text-slate-600"
+                        >
+                          <span className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-lime-100 text-lime-700">
+                            0{index + 1}
+                          </span>
+                          <p>{item}</p>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-3">
+                      <Link
+                        href="/kontak"
+                        className="inline-flex items-center gap-2 rounded-full bg-lime-600 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-lime-700"
+                      >
+                        Konsultasi Sekarang
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+                      <Link
+                        href="/portofolio"
+                        className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:border-lime-400 hover:text-lime-700"
+                      >
+                        Lihat Portofolio
+                      </Link>
+                    </div>
+                  </Reveal>
+
+                  <Reveal delay={0.1} className="lg:justify-self-end">
+                    <div className="rounded-[28px] border border-slate-200 bg-white p-4 shadow-xl">
+                      <img
+                        src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80"
+                        alt="Modern architecture and interior"
+                        className="h-[320px] w-full rounded-[22px] object-cover sm:h-[420px]"
+                      />
+                      <div className="grid gap-4 px-1 pb-1 pt-5 sm:grid-cols-2">
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                            FOKUS UTAMA
+                          </p>
+                          <p className="mt-2 text-sm leading-7 text-slate-600">
+                            Hunian, renovasi, interior built-in, utilitas, dan eksterior dengan
+                            pendekatan rapi serta terstruktur.
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                            RESPONS CEPAT
+                          </p>
+                          <a
+                            href={company.whatsappLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-lime-700 hover:text-lime-800"
+                          >
+                            <MessageCircleMore className="h-4 w-4" />
+                            {company.whatsappDisplay}
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </Reveal>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="hero-highlight">
-            <article>
-              <h3>About Us</h3>
-              <p>Local contractor focused on quality work, clear process, and dependable timelines.</p>
-            </article>
-            <article>
-              <h3>Our Services</h3>
-              <p>Comprehensive building, interior, electrical, AC, and gardening services in one team.</p>
-            </article>
-            <article>
-              <h3>Contact</h3>
-              <p>Fast WhatsApp response for surveys, cost estimates, and project scheduling.</p>
-            </article>
+      <section className="py-16 sm:py-20">
+        <div className="page-frame">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <Reveal className="space-y-5">
+              <p className="surface-label">
+                <span className="lime-dot"></span>
+                Brief About Us
+              </p>
+              <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
+                Tentang kami dalam versi singkat, jelas, dan tetap terasa premium.
+              </h2>
+              <p className="max-w-xl text-base leading-8 text-slate-600">
+                Kami membantu klien mewujudkan ruang yang lebih fungsional dan bernilai tinggi
+                melalui perpaduan konstruksi yang kuat, detail interior yang bersih, dan koordinasi
+                proyek yang nyaman diajak bekerja.
+              </p>
+              <Link
+                href="/tentang-kami"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 transition hover:text-lime-700"
+              >
+                Baca Tentang Kami
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Reveal>
+
+            <Reveal delay={0.1} className="grid gap-4 sm:grid-cols-2">
+              <div className="soft-panel rounded-[28px] p-6 sm:col-span-2">
+                <div className="grid gap-6 sm:grid-cols-[0.9fr_1.1fr] sm:items-center">
+                  <img
+                    src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+                    alt="Company overview"
+                    className="h-56 w-full rounded-[22px] object-cover"
+                  />
+                  <div className="space-y-4">
+                    <p className="text-sm leading-7 text-slate-600">
+                      Pendekatan kami menekankan visi desain, pemilihan material, dan konsistensi
+                      kualitas agar proyek terasa matang dari konsep sampai finishing.
+                    </p>
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      <div className="rounded-2xl bg-slate-50 px-4 py-4">
+                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Visi</p>
+                        <p className="mt-2 text-sm leading-7 text-slate-700">Membangun ruang yang kuat, rapi, dan bernilai.</p>
+                      </div>
+                      <div className="rounded-2xl bg-slate-50 px-4 py-4">
+                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Misi</p>
+                        <p className="mt-2 text-sm leading-7 text-slate-700">Melayani dengan komunikasi jelas dan hasil premium.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
-      <section id="about" className="section">
-        <div className="container split">
-          <div>
-            <p className="eyebrow">About Us</p>
-            <h2>CV. NISFI NASBAR</h2>
-            <p>
-              CV. NISFI NASBAR is a construction and property service company based in Bojong Gede,
-              Bogor Regency, West Java. We support new builds, upgrades, and maintenance projects with
-              efficient workflows and field-tested craftsmanship.
-            </p>
-            <p>
-              Our team combines technical execution with design awareness, so your project is not only
-              functional but also visually strong, modern, and aligned with your budget goals.
-            </p>
+      <section className="pb-16 sm:pb-20">
+        <div className="page-frame">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <Reveal className="space-y-4">
+              <p className="surface-label">
+                <span className="lime-dot"></span>
+                Brief Services
+              </p>
+              <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
+                Ringkas, fokus, dan langsung menunjukkan standar layanan kami.
+              </h2>
+            </Reveal>
+            <Link
+              href="/layanan"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 transition hover:text-lime-700"
+            >
+              Lihat Semua Layanan
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
 
-          <div className="feature-card">
-            <h3>Operating Hours</h3>
-            <ul>
-              <li>
-                <strong>Monday - Saturday:</strong> 8:00 AM - 5:00 PM WIB
-              </li>
-              <li>
-                <strong>Sunday:</strong> By appointment
-              </li>
-            </ul>
-            <h3>Office Address</h3>
-            <p>
-              Kampung Pos Muara, Bojong Gede Village No. 36, Bojong Gede Subdistrict, Bojong Gede
-              Regency, Bogor Regency, West Java Province.
-            </p>
-          </div>
-        </div>
-      </section>
+          <div className="mt-8 grid gap-5 lg:grid-cols-3">
+            {briefServices.map((service, index) => {
+              const Icon = service.icon;
 
-      <section id="services" className="section alt">
-        <div className="container">
-          <p className="eyebrow">Services</p>
-          <h2>Integrated Service Lines</h2>
-          <div className="service-grid">
-            {services.map((service) => (
-              <article key={service}>{service}</article>
-            ))}
+              return (
+                <Reveal key={service.title} delay={0.05 * index}>
+                  <article className="soft-panel group rounded-[28px] p-6 transition hover:-translate-y-1 hover:shadow-2xl">
+                    <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-lime-100 text-lime-700 transition group-hover:bg-lime-600 group-hover:text-white">
+                      <Icon className="h-6 w-6" />
+                    </span>
+                    <h3 className="mt-5 text-xl font-semibold text-slate-950">{service.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-slate-600">{service.text}</p>
+                  </article>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
-
-      <section id="portfolio" className="section">
-        <div className="container">
-          <p className="eyebrow">Portfolio</p>
-          <h2>Recent Work Highlights</h2>
-          <p className="section-note">Project gallery references loaded from your `Portofolio` folder.</p>
-          <div className="portfolio-grid">
-            {portfolioItems.map((item) => (
-              <figure key={item.src}>
-                <img src={item.src} alt={item.title} />
-                <figcaption>{item.title}</figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="advantages" className="section alt">
-        <div className="container">
-          <p className="eyebrow">Advantages</p>
-          <h2>Why Property Owners Choose Us</h2>
-          <div className="adv-grid">
-            {advantages.map((adv) => (
-              <article key={adv.title}>
-                <h3>{adv.title}</h3>
-                <p>{adv.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="section contact">
-        <div className="container split">
-          <div>
-            <p className="eyebrow">Contact</p>
-            <h2>Discuss Your Project With Our Team</h2>
-            <p>
-              Send your needs, floor area, and expected timeline. We will help with practical
-              recommendations and a clear implementation plan.
-            </p>
-            <a className="btn btn-primary" href="https://wa.me/6281381853922" target="_blank" rel="noreferrer">
-              Chat on WhatsApp
-            </a>
-          </div>
-
-          <div className="feature-card contact-card">
-            <h3>WhatsApp</h3>
-            <p>
-              <a href="https://wa.me/6281381853922" target="_blank" rel="noreferrer">
-                0813-8185-3922
-              </a>
-            </p>
-            <h3>Support Scope</h3>
-            <p>
-              Consultation, site checks, work estimation, implementation planning, and technical
-              execution support.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <a
-        className="whatsapp-float"
-        href="https://wa.me/6281381853922"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Chat on WhatsApp"
-      >
-        <svg viewBox="0 0 32 32" aria-hidden="true">
-          <path d="M16.05 4.01c-6.62 0-12 5.37-12 12 0 2.12.56 4.2 1.62 6.03L4 28l6.14-1.61a11.95 11.95 0 0 0 5.9 1.55h.01c6.62 0 12-5.37 12-12s-5.38-11.93-12-11.93Zm0 21.84h-.01a9.92 9.92 0 0 1-5.04-1.37l-.36-.21-3.64.95.97-3.54-.24-.36a9.87 9.87 0 0 1-1.52-5.3c0-5.46 4.44-9.91 9.9-9.91 2.64 0 5.11 1.03 6.98 2.91a9.82 9.82 0 0 1 2.9 6.99c0 5.46-4.45 9.9-9.94 9.9Zm5.43-7.44c-.3-.15-1.8-.89-2.08-.99-.28-.1-.48-.15-.68.15-.2.3-.78.99-.96 1.19-.18.2-.35.22-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.79-1.68-2.08-.18-.3-.02-.46.13-.6.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.65-.94-2.27-.24-.58-.49-.5-.68-.5h-.58c-.2 0-.53.08-.8.38-.28.3-1.06 1.04-1.06 2.54 0 1.5 1.09 2.95 1.24 3.15.15.2 2.14 3.27 5.18 4.58.73.32 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.8-.74 2.06-1.46.25-.72.25-1.33.18-1.45-.07-.12-.27-.2-.57-.35Z" />
-        </svg>
-        <span>WhatsApp</span>
-      </a>
-    </main>
+    </>
   );
 }

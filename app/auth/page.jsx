@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { LockKeyhole, Mail, UserRound } from "lucide-react";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
 
 export default function AuthPage() {
@@ -21,6 +22,7 @@ export default function AuthPage() {
       setError("Supabase is not configured. Add environment values first.");
       return;
     }
+
     setLoading(true);
     setMessage("");
     setError("");
@@ -39,9 +41,7 @@ export default function AuthPage() {
 
         if (registerError) throw registerError;
 
-        setMessage(
-          "Registration success. Check your email for confirmation if email verification is enabled.",
-        );
+        setMessage("Registration success. Check your email if confirmation is enabled.");
       } else {
         const { error: loginError } = await supabase.auth.signInWithPassword({
           email,
@@ -60,80 +60,116 @@ export default function AuthPage() {
   };
 
   return (
-    <main className="auth-main">
-      <div className="container auth-wrap">
-        <div className="auth-card">
-          <p className="eyebrow">Account Access</p>
-          <h1>{mode === "login" ? "Login" : "Register"} to CV. NISFI NASBAR</h1>
-          <p>Users who register here are stored in Supabase and can immediately log in to the website.</p>
-          {!supabase && (
-            <p className="msg error">
-              Missing Supabase configuration. Set environment variables in <code>.env.local</code>.
+    <section className="py-14 sm:py-20">
+      <div className="page-frame">
+        <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="dark-panel site-grid rounded-[32px] px-7 py-10 text-white sm:px-10">
+            <p className="section-label">
+              <span className="lime-dot"></span>
+              Account Access
             </p>
-          )}
-
-          <div className="auth-switch">
-            <button
-              type="button"
-              className={mode === "login" ? "active" : ""}
-              onClick={() => setMode("login")}
-            >
-              Login
-            </button>
-            <button
-              type="button"
-              className={mode === "register" ? "active" : ""}
-              onClick={() => setMode("register")}
-            >
-              Register
-            </button>
+            <h1 className="font-display mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
+              {mode === "login" ? "Login" : "Register"} to {mode === "login" ? "manage access" : "create an account"}.
+            </h1>
+            <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">
+              Registrasi di halaman ini langsung terhubung ke Supabase Auth, sehingga pengguna bisa
+              masuk ke website menggunakan akun yang sama.
+            </p>
           </div>
 
-          <form className="auth-form" onSubmit={submitAuth}>
-            {mode === "register" && (
-              <label>
-                Full Name
-                <input
-                  type="text"
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
-                  placeholder="Your full name"
-                />
-              </label>
+          <div className="soft-panel rounded-[32px] p-7 sm:p-10">
+            {!supabase && (
+              <div className="mb-5 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
+                Missing Supabase configuration. Set environment variables in <code>.env.local</code>.
+              </div>
             )}
 
-            <label>
-              Email
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="name@example.com"
-              />
-            </label>
+            <div className="inline-flex rounded-full border border-slate-200 bg-slate-50 p-1">
+              {["login", "register"].map((item) => (
+                <button
+                  key={item}
+                  type="button"
+                  onClick={() => setMode(item)}
+                  className={[
+                    "rounded-full px-5 py-2 text-sm font-medium transition",
+                    mode === item ? "bg-slate-950 text-white" : "text-slate-600 hover:text-slate-950",
+                  ].join(" ")}
+                >
+                  {item === "login" ? "Login" : "Register"}
+                </button>
+              ))}
+            </div>
 
-            <label>
-              Password
-              <input
-                type="password"
-                required
-                minLength={6}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Minimum 6 characters"
-              />
-            </label>
+            <form className="mt-8 space-y-5" onSubmit={submitAuth}>
+              {mode === "register" && (
+                <label className="block">
+                  <span className="mb-2 block text-sm font-medium text-slate-700">Full Name</span>
+                  <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3">
+                    <UserRound className="h-5 w-5 text-lime-700" />
+                    <input
+                      type="text"
+                      value={fullName}
+                      onChange={(e) => setFullName(e.target.value)}
+                      placeholder="Your full name"
+                      className="w-full bg-transparent text-sm outline-none"
+                    />
+                  </div>
+                </label>
+              )}
 
-            <button className="btn btn-primary" type="submit" disabled={loading}>
-              {loading ? "Processing..." : mode === "login" ? "Login Now" : "Create Account"}
-            </button>
-          </form>
+              <label className="block">
+                <span className="mb-2 block text-sm font-medium text-slate-700">Email</span>
+                <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3">
+                  <Mail className="h-5 w-5 text-lime-700" />
+                  <input
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="name@example.com"
+                    className="w-full bg-transparent text-sm outline-none"
+                  />
+                </div>
+              </label>
 
-          {message && <p className="msg success">{message}</p>}
-          {error && <p className="msg error">{error}</p>}
+              <label className="block">
+                <span className="mb-2 block text-sm font-medium text-slate-700">Password</span>
+                <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3">
+                  <LockKeyhole className="h-5 w-5 text-lime-700" />
+                  <input
+                    type="password"
+                    required
+                    minLength={6}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Minimum 6 characters"
+                    className="w-full bg-transparent text-sm outline-none"
+                  />
+                </div>
+              </label>
+
+              <button
+                className="inline-flex w-full items-center justify-center rounded-full bg-lime-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-lime-700 disabled:opacity-60"
+                type="submit"
+                disabled={loading}
+              >
+                {loading ? "Processing..." : mode === "login" ? "Login Now" : "Create Account"}
+              </button>
+            </form>
+
+            {message && (
+              <div className="mt-5 rounded-2xl border border-lime-200 bg-lime-50 px-4 py-3 text-sm text-lime-800">
+                {message}
+              </div>
+            )}
+            {error && (
+              <div className="mt-5 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
+                {error}
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 }

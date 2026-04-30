@@ -2,7 +2,7 @@
   "name": "compro-cv.nisfi",
   "version": "1.0.0",
   "private": true,
-  "description": "Company profile website for CV. NISFI NASBAR with Supabase auth and admin management.",
+  "description": "Company profile website for CV. NISFI SABAR with Supabase auth and admin management.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,13 +13,17 @@
     "supabase",
     "company-profile"
   ],
-  "author": "CV. NISFI NASBAR",
+  "author": "CV. NISFI SABAR",
   "license": "MIT",
   "dependencies": {
     "@supabase/ssr": "^0.10.2",
     "@supabase/supabase-js": "^2.105.1",
+    "@tailwindcss/postcss": "^4.2.4",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.12.0",
     "next": "^16.2.4",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react-dom": "^19.2.5",
+    "tailwindcss": "^4.2.4"
   }
 }
