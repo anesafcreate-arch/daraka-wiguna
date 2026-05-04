@@ -11,7 +11,9 @@ export default function AdvantagesPage() {
       <PageHero
         eyebrow="Keunggulan"
         title="Nilai pembeda yang membuat pelanggan lebih yakin memilih kami."
-        description="Bagian ini sengaja dibuat sebagai halaman tersendiri agar USP perusahaan tampil kuat tanpa membuat homepage terlalu padat."
+        description="Kami tidak sekadar membangun, tetapi memberikan solusi. Dengan manajemen proyek yang transparan, material premium, dan tenaga ahli berpengalaman, kami memastikan setiap detail hunian Anda terbangun dengan sempurna dan tepat waktu."
+        imageSrc="/picture/keunggulan_kami.jpg"
+        imageAlt="Hero banner keunggulan CV Nisfi Sabar"
       />
 
       <section className="py-16 sm:py-20">

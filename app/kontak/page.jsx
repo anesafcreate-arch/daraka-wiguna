@@ -15,7 +15,9 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Kontak"
         title="Hubungi kami dengan cara yang cepat, jelas, dan langsung terhubung."
-        description="Halaman kontak dibuat terpisah agar informasi perusahaan tetap lengkap tanpa membebani homepage. WhatsApp juga terhubung langsung lewat tombol mengambang di seluruh situs."
+        description="Punya visi untuk hunian atau ruang bisnis impian? Tim ahli kami selalu siap mendengarkan dan memberikan solusi terbaik. Hubungi kami hari ini untuk konsultasi awal, survei lokasi, dan estimasi biaya."
+        imageSrc="/picture/kontak_kami.jpg"
+        imageAlt="Hero banner kontak CV Nisfi Sabar"
       />
 
       <section className="py-16 sm:py-20">

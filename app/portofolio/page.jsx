@@ -7,7 +7,9 @@ export default function PortfolioPage() {
       <PageHero
         eyebrow="Portofolio"
         title="Galeri proyek dengan citra arsitektur dan interior yang terasa bersih, modern, dan bernilai."
-        description="Halaman ini memakai placeholder visual berkualitas tinggi yang mewakili 10 kategori layanan agar presentasi portofolio tetap konsisten dan profesional."
+        description="Jelajahi deretan ruang dan bangunan yang telah berhasil kami wujudkan. Dari struktur konstruksi yang kokoh hingga detail interior yang presisi, setiap portofolio ini adalah bukti nyata komitmen kami terhadap kualitas kerja."
+        imageSrc="/picture/portofolio_hero.jpg"
+        imageAlt="Hero banner portofolio CV Nisfi Sabar"
       />
 
       <section className="py-16 sm:py-20">

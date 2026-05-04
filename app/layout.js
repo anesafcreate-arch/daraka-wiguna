@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
                 NS
               </span>
               <span className="max-w-[270px] text-[10px] font-semibold uppercase leading-tight tracking-[0.14em] text-slate-950 sm:max-w-none sm:text-xs">
-                CV. NISFI SABAR KONTRAKTOR PROFESIONAL
+                CV. NISFI SABAR
               </span>
             </Link>
 

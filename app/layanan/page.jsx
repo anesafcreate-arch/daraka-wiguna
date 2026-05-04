@@ -10,6 +10,8 @@ export default function ServicesPage() {
         eyebrow="Layanan"
         title="Katalog layanan konstruksi dan interior yang lengkap, modern, dan siap dieksekusi."
         description="Setiap layanan dirancang untuk menjawab kebutuhan hunian dan properti secara profesional, dari struktur utama hingga detail finishing yang memperkuat kesan akhir."
+        imageSrc="/picture/hero-baner-layanan.jpg"
+        imageAlt="Hero banner layanan CV Nisfi Sabar"
       />
 
       <section className="py-16 sm:py-20">
@@ -30,7 +32,7 @@ export default function ServicesPage() {
                       <div>
                         <h2 className="text-xl font-semibold text-slate-950">{service.title}</h2>
                       </div>
-                      <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-lime-100 text-lime-700 transition group-hover:bg-lime-600 group-hover:text-white">
+                      <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-white/85 text-slate-500 shadow-[0_8px_24px_rgba(15,23,42,0.08)] backdrop-blur transition group-hover:border-lime-200 group-hover:text-lime-700">
                         <Icon className="h-5 w-5" />
                       </span>
                     </div>
