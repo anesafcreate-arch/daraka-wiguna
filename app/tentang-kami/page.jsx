@@ -9,7 +9,7 @@ import styles from "./page.module.css";
 
 export default function AboutPage() {
   const cinematicUp = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 1, y: 0 },
     visible: {
       opacity: 1,
       y: 0,
@@ -18,7 +18,7 @@ export default function AboutPage() {
   };
 
   const staggerContainer = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
@@ -32,7 +32,7 @@ export default function AboutPage() {
     <>
       <section className="pt-10 sm:pt-14">
         <motion.div
-          initial="hidden"
+          initial={false}
           animate="visible"
           variants={staggerContainer}
           className="page-frame"
@@ -58,15 +58,15 @@ export default function AboutPage() {
                 </span>
               </motion.div>
 
-              <motion.h1 variants={cinematicUp} className="font-display text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-                Kontraktor Profesional Untuk Bangunan{" "}
+              <motion.h1 variants={cinematicUp} className="font-display text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-5xl">
+              Mitra Konstruksi dan Renovasi Untuk Berbagai{" "}
                 <span className="bg-gradient-to-r from-[#84cc16] to-[#06b6d4] bg-clip-text font-extrabold text-transparent">
-                  Impian Anda
+                Kebutuhan Bangunan
                 </span>
               </motion.h1>
 
               <motion.p variants={cinematicUp} className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-200 sm:text-base">
-                Dari perencanaan presisi hingga eksekusi tanpa kompromi. Kami hadir untuk mengubah visi Anda menjadi ruang nyata yang kokoh, fungsional, dan estetis.
+              Kami melayani pekerjaan konstruksi, renovasi, dan penataan ruang dengan proses kerja yang jelas, pengerjaan yang rapi, serta menyesuaikan kebutuhan setiap client.
               </motion.p>
 
               <motion.div variants={cinematicUp} className="mt-6 flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
@@ -88,13 +88,13 @@ export default function AboutPage() {
 
               <motion.div variants={cinematicUp} className="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs font-medium text-gray-300 sm:text-sm">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-[#84cc16]">✓</span> Gratis Survei & RAB
+                  <span className="text-[#84cc16]">✓</span> Survey & Konsultasi Awal
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-[#84cc16]">✓</span> Tenaga Ahli Profesional
+                  <span className="text-[#84cc16]">✓</span> Tim Berpengalaman
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-[#84cc16]">✓</span> Tepat Waktu & Bergaransi
+                  <span className="text-[#84cc16]">✓</span> Pengerjaan Sesuai Kesepakatan
                 </div>
               </motion.div>
             </div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
 
       <section className={styles.aboutSection}>
         <motion.div
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
@@ -124,29 +124,24 @@ export default function AboutPage() {
 
             <div className={styles.aboutCopy}>
               <motion.p variants={cinematicUp} className={styles.aboutParagraph}>
-                Kini, mewujudkan bangunan dan hunian impian yang nyaman bukan lagi sekadar angan. CV.
-                Nisfi Sabar hadir sebagai mitra kontraktor dan spesialis perawatan bangunan terpercaya
-                Anda. Bergerak di bidang konstruksi, renovasi, hingga tata ruang, kami selalu
-                berkomitmen memberikan pelayanan terbaik kepada setiap klien. Didukung oleh tim tenaga
-                kerja yang berpengalaman and profesional, setiap proyek yang kami tangani dikerjakan
-                dengan presisi, menggunakan material berkualitas, and sesuai dengan standar keamanan.
+              CV. NISFI SABAR merupakan perusahaan yang bergerak di bidang konstruksi, renovasi, 
+              greenhouse, aluminium, interior, serta berbagai pekerjaan bangunan lainnya. 
+              Dengan pengalaman dalam menangani berbagai kebutuhan proyek, kami berkomitmen untuk memberikan layanan yang profesional, 
+              mulai dari tahap perencanaan hingga proses pengerjaan di lapangan.
               </motion.p>
               <motion.p variants={cinematicUp} className={styles.aboutParagraph}>
-                Jangkauan layanan kami sangat komprehensif, dirancang sebagai solusi satu pintu
-                (one-stop solution) untuk Anda. Layanan utama kami meliputi konstruksi bangunan dari
-                nol, renovasi rumah, hingga pembuatan struktur rumah kaca aluminium yang modern. Untuk
-                menyempurnakan estetika and fungsi ruangan, kami ahli dalam instalasi kitchen set,
-                pemasangan partisi wallpaper, pengecatan detail, hingga penataan taman and landscape
-                yang asri. Tidak berhenti di situ, kami juga memastikan bangunan Anda berfungsi optimal
-                melalui layanan instalasi listrik and service AC oleh teknisi ahli.
+              Kami melayani pembangunan maupun renovasi untuk rumah tinggal, bangunan komersial, 
+              fasilitas usaha, serta berbagai kebutuhan konstruksi lainnya. 
+              Setiap pekerjaan kami kerjakan dengan memperhatikan kualitas hasil, ketepatan pelaksanaan, 
+              dan komunikasi yang baik agar proyek dapat berjalan sesuai harapan dan kebutuhan client.
               </motion.p>
               <motion.p variants={cinematicUp} className={styles.aboutParagraph}>
-                Bagi kami, setiap detail sangat berarti. Dalam setiap tahap pekerjaan, kami akan selalu
-                menyesuaikan perencanaan dengan anggaran and kebutuhan spesifik yang Anda miliki, tanpa
-                mengorbankan kualitas. Berbagai hasil karya konstruksi, interior, and eksterior telah
-                berhasil kami wujudkan. Kepuasan and kenyamanan Anda di dalam ruang yang kami bangun
-                adalah sebuah kehormatan sekaligus motivasi bagi CV. Nisfi Sabar untuk terus memberikan
-                hasil kerja yang rapi, kokoh, and tepat waktu.
+              Didukung oleh tenaga kerja yang berpengalaman dan memiliki pemahaman di bidangnya masing-masing,
+              kami berupaya memberikan hasil pekerjaan yang rapi, fungsional, dan sesuai dengan kondisi lapangan. 
+              Bagi kami, setiap proyek memiliki karakteristik yang berbeda, sehingga pendekatan yang kami lakukan selalu disesuaikan dengan kebutuhan, 
+              anggaran, dan tujuan yang ingin dicapai oleh client. Melalui komitmen terhadap kualitas pekerjaan dan pelayanan yang baik, 
+              CV. NISFI SABAR terus berupaya menjadi mitra yang dapat dipercaya dalam berbagai kebutuhan konstruksi dan renovasi, 
+              aik untuk skala kecil maupun proyek yang lebih kompleks.
               </motion.p>
             </div>
           </div>
@@ -155,7 +150,7 @@ export default function AboutPage() {
 
       <section className={styles.visionMissionSection}>
         <motion.div
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
@@ -172,9 +167,8 @@ export default function AboutPage() {
                 <motion.article variants={cinematicUp} className={styles.vmCard}>
                   <h2 className={`mb-4 text-2xl font-bold text-[#84cc16] ${styles.vmTitle}`}>VISI KAMI</h2>
                   <p className={`text-lg leading-relaxed text-white ${styles.vmBody}`}>
-                    Menjadi mitra terpercaya and solusi utama dalam industri konstruksi, renovasi, and
-                    perawatan tata ruang, yang menghadirkan kualitas kerja terbaik, estetika tinggi, and
-                    kenyamanan maksimal untuk setiap hunian and bangunan.
+                  Menjadi perusahaan konstruksi yang dapat dipercaya melalui kualitas pekerjaan, 
+                  pelayanan yang baik, dan hubungan kerja yang profesional dengan setiap client.
                   </p>
                 </motion.article>
 
@@ -182,19 +176,16 @@ export default function AboutPage() {
                   <h2 className={`mb-4 mt-10 text-2xl font-bold text-[#84cc16] ${styles.vmTitle}`}>MISI KAMI</h2>
                   <ul className={`list-disc space-y-3 pl-5 text-lg leading-relaxed text-white ${styles.vmBody} ${styles.vmList}`}>
                     <li>
-                      Memberikan layanan konstruksi and renovasi yang presisi, kokoh, and tepat waktu.
+                    Melaksanakan pekerjaan konstruksi dan renovasi sesuai kebutuhan client dan kesepakatan proyek.
                     </li>
                     <li>
-                      Menghadirkan solusi interior and eksterior yang inovatif, mulai dari instalasi
-                      kitchen set, partisi, hingga desain landscape taman yang asri.
+                    Menyediakan layanan interior, eksterior, dan penataan ruang yang fungsional serta nyaman digunakan.
                     </li>
                     <li>
-                      Menyediakan layanan teknis and pemeliharaan yang handal, termasuk instalasi listrik
-                      and servis AC, guna memastikan bangunan berfungsi optimal.
+                    Memberikan dukungan teknis dan pemeliharaan bangunan sesuai kebutuhan client.
                     </li>
                     <li>
-                      Mengutamakan kepuasan klien melalui komunikasi yang transparan, pengerjaan yang rapi,
-                      serta penggunaan material berkualitas di setiap proyek.
+                    Menjaga komunikasi yang baik, kualitas pengerjaan, dan tanggung jawab dalam setiap proyek yang dikerjakan.
                     </li>
                   </ul>
                 </motion.article>

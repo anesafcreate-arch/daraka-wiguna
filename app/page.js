@@ -35,14 +35,14 @@ const testimonials = [
 
 
 const heroHighlightsIndo = [
-  "Konstruksi modern dan eksekusi interior",
-  "Detailing premium dengan perencanaan praktis",
+  "Pengerjaan bangunan dan interior sesuai kebutuhan",
+  "Perencanaan kerja yang terarah dan rapi",
   "Konsultasi cepat terintegrasi WhatsApp"
 ];
 
 export default function HomePage() {
   const cinematicUp = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 1, y: 0 },
     visible: { 
       opacity: 1, 
       y: 0,
@@ -51,7 +51,7 @@ export default function HomePage() {
   };
 
   const staggerContainer = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: { staggerChildren: 0.15, delayChildren: 0.1 },
@@ -62,7 +62,7 @@ export default function HomePage() {
     <>
       <section className="pt-8 sm:pt-10">
         <motion.div 
-          initial="hidden" 
+          initial={false}
           animate="visible" 
           variants={staggerContainer} 
           className="page-frame"
@@ -85,14 +85,15 @@ export default function HomePage() {
                   Beranda
                 </motion.p>
 
-                <motion.div variants={cinematicUp} className="mt-7 space-y-5">
-                  <h1 className="font-display mx-auto max-w-4xl text-4xl font-semibold leading-none tracking-tight text-white sm:text-5xl lg:text-6xl">
-                    Wujudkan Bangunan Impian Anda
+                <motion.div variants={cinematicUp} className="mt-7 space-y-7">
+                  <h1 className="font-display mx-auto max-w-6xl text-4xl font-semibold leading-none tracking-tight text-white sm:text-5xl lg:text-6xl">
+                  Layanan Konstruksi & 
+                  Renovasi Bangunan
                   </h1>
                   <p className="mx-auto max-w-3xl text-base leading-8 text-white/90 sm:text-lg">
-                    CV. NISFI SABAR hadir sebagai solusi terbaik untuk kebutuhan konstruksi, bangunan,
-                    greenhouse, aluminium, dan renovasi properti Anda. Kami berkomitmen memberikan
-                    hasil berkualitas dengan harga kompetitif.
+                  CV. NISFI SABAR melayani pekerjaan konstruksi, renovasi, greenhouse, aluminium, 
+                  dan kebutuhan bangunan lainnya dengan pengerjaan yang rapi, komunikasi yang jelas, 
+                  dan menyesuaikan kebutuhan Anda.
                   </p>
                 </motion.div>
 
@@ -115,7 +116,7 @@ export default function HomePage() {
                     href="/kontak"
                     className="inline-flex items-center gap-2 rounded-full bg-lime-600 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-lime-700"
                   >
-                    Konsultasi Sekarang
+                    Hubungi Kami
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
@@ -133,7 +134,7 @@ export default function HomePage() {
 
       <section className="py-16 sm:py-20">
         <motion.div 
-          initial="hidden" 
+          initial={false}
           whileInView="visible" 
           viewport={{ once: true, margin: "-100px" }} 
           variants={staggerContainer} 
@@ -146,12 +147,11 @@ export default function HomePage() {
                 ABOUT US
               </p>
               <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
-                Tentang kami dalam versi singkat, jelas, dan tetap terasa premium.
+              Tentang CV. NISFI SABAR
               </h2>
               <p className="max-w-xl text-base leading-8 text-slate-600">
-                Kami membantu klien mewujudkan ruang yang lebih fungsional dan bernilai tinggi
-                melalui perpaduan konstruksi yang kuat, detail interior yang bersih, dan koordinasi
-                proyek yang nyaman diajak bekerja.
+              Kami melayani berbagai pekerjaan konstruksi dan renovasi dengan fokus pada kualitas pengerjaan, 
+              komunikasi yang jelas, dan proses kerja yang terarah sesuai kebutuhan client.
               </p>
               <Link
                 href="/tentang-kami"
@@ -181,7 +181,7 @@ export default function HomePage() {
                           Visi
                         </p>
                         <p className="mt-2 text-sm leading-7 text-slate-700">
-                          Membangun ruang yang kuat, rapi, dan bernilai.
+                        Memberikan hasil pekerjaan yang rapi, nyaman digunakan, dan sesuai kebutuhan client.
                         </p>
                       </div>
                       <div className="rounded-2xl bg-slate-50 px-4 py-4">
@@ -189,7 +189,7 @@ export default function HomePage() {
                           Misi
                         </p>
                         <p className="mt-2 text-sm leading-7 text-slate-700">
-                          Melayani dengan komunikasi jelas dan hasil premium.
+                        Menjaga kualitas pengerjaan dan komunikasi selama proses proyek berlangsung.
                         </p>
                       </div>
                     </div>
@@ -203,7 +203,7 @@ export default function HomePage() {
 
       <section className="pb-16 sm:pb-20">
         <motion.div 
-          initial="hidden" 
+          initial={false}
           whileInView="visible" 
           viewport={{ once: true, margin: "-100px" }} 
           variants={staggerContainer} 
@@ -216,7 +216,7 @@ export default function HomePage() {
                 SERVICES
               </p>
               <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
-                Ringkas, fokus, dan langsung menunjukkan standar layanan kami.
+              Beberapa Layanan Yang Kami Kerjakan
               </h2>
             </div>
             <Link
@@ -252,7 +252,7 @@ export default function HomePage() {
 
       <section className="pb-16 sm:pb-20">
         <motion.div 
-          initial="hidden" 
+          initial={false}
           whileInView="visible" 
           viewport={{ once: true, margin: "-100px" }} 
           variants={staggerContainer} 
@@ -267,7 +267,7 @@ export default function HomePage() {
               Apa Kata Pelanggan Kami?
             </h2>
             <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-              Kepuasan pelanggan adalah bukti nyata dari kualitas layanan yang kami berikan.
+            Pengalaman client yang telah menggunakan layanan kami.
             </p>
           </motion.div>
 

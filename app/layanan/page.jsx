@@ -8,8 +8,8 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Layanan"
-        title="Katalog layanan konstruksi dan interior yang lengkap, modern, dan siap dieksekusi."
-        description="Setiap layanan dirancang untuk menjawab kebutuhan hunian dan properti secara profesional, dari struktur utama hingga detail finishing yang memperkuat kesan akhir."
+        title="Layanan Konstruksi, Renovasi, Eksterior dan Interior"
+        description="Kami melayani berbagai kebutuhan konstruksi, renovasi, interior, dan pekerjaan bangunan lainnya untuk rumah tinggal, bangunan usaha, maupun fasilitas lainnya."
         imageSrc="/picture/hero-baner-layanan.jpg"
         imageAlt="Hero banner layanan CV Nisfi Sabar"
       />

@@ -53,9 +53,7 @@ export default function PortfolioGallery() {
                 {item.category}
               </span>
               <h3 className="text-xl font-semibold text-slate-950">{item.title}</h3>
-              <p className="text-sm leading-7 text-slate-600">
-                Placeholder visual yang disusun agar selaras dengan karakter layanan dan suasana proyek premium.
-              </p>
+              <p className="text-sm leading-7 text-slate-600">{item.description}</p>
             </div>
           </article>
         ))}

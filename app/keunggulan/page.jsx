@@ -10,8 +10,8 @@ export default function AdvantagesPage() {
     <>
       <PageHero
         eyebrow="Keunggulan"
-        title="Nilai pembeda yang membuat pelanggan lebih yakin memilih kami."
-        description="Kami tidak sekadar membangun, tetapi memberikan solusi. Dengan manajemen proyek yang transparan, material premium, dan tenaga ahli berpengalaman, kami memastikan setiap detail hunian Anda terbangun dengan sempurna dan tepat waktu."
+        title="Alasan Client Mempercayakan Proyek Kepada Kami"
+        description="Kami berusaha memberikan pelayanan yang baik melalui komunikasi yang jelas, pengerjaan yang rapi, serta tanggung jawab dalam setiap proyek yang kami kerjakan."
         imageSrc="/picture/keunggulan_kami.jpg"
         imageAlt="Hero banner keunggulan CV Nisfi Sabar"
       />
@@ -43,9 +43,9 @@ export default function AdvantagesPage() {
             </p>
             <div className="mt-6 grid gap-6 lg:grid-cols-3">
               {[
-                "Tim profesional yang menjaga komunikasi dan detail kerja.",
-                "Pengiriman hasil sesuai timeline yang lebih terukur.",
-                "Pemilihan material dan finishing yang mengangkat kualitas visual proyek.",
+                "Tim berpengalaman dengan komunikasi yang baik selama proyek berlangsung.",
+                "Pengerjaan dilakukan sesuai tahapan dan jadwal yang telah disepakati.",
+                "Material dan metode pengerjaan disesuaikan dengan kebutuhan proyek.",
               ].map((item) => (
                 <div key={item} className="rounded-3xl bg-slate-50 px-5 py-5 text-sm leading-7 text-slate-700">
                   {item}

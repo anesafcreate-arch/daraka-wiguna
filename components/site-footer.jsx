@@ -46,8 +46,8 @@ export default function SiteFooter() {
                 Siap Mewujudkan Proyek Anda?
               </h3>
               <p className="text-sm leading-7 text-emerald-50/90">
-                {company.name} siap membantu kebutuhan konstruksi, renovasi, greenhouse, aluminium,
-                hingga penataan properti dengan hasil rapi dan profesional.
+                {company.name} melayani kebutuhan konstruksi, renovasi, greenhouse, aluminium, 
+                interior, dan berbagai pekerjaan bangunan lainnya sesuai kebutuhan client.
               </p>
               <div className="space-y-4">
                 <FooterInfo icon="address" title="Alamat" text={company.address} />
@@ -59,13 +59,12 @@ export default function SiteFooter() {
             <div className="space-y-5 rounded-[30px] border border-white/20 bg-white/10 p-6 text-left backdrop-blur-sm sm:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-100">Kirim Pesan</p>
               <p className="text-sm leading-7 text-emerald-50/90">
-                Ceritakan kebutuhan proyek Anda, tim kami akan segera menyiapkan solusi dan estimasi
-                terbaik sesuai budget.
+              Ceritakan kebutuhan proyek Anda, tim kami akan membantu memberikan informasi awal dan arahan pekerjaan yang sesuai.
               </p>
               <div className="space-y-3 text-sm text-emerald-50">
                 <p className="flex items-center justify-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-200" />
-                  Konsultasi awal gratis
+                  Konsultasi kebutuhan proyek
                 </p>
                 <p className="flex items-center justify-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-200" />

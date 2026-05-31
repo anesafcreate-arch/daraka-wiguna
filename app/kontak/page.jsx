@@ -15,7 +15,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Kontak"
         title="Hubungi kami dengan cara yang cepat, jelas, dan langsung terhubung."
-        description="Punya visi untuk hunian atau ruang bisnis impian? Tim ahli kami selalu siap mendengarkan dan memberikan solusi terbaik. Hubungi kami hari ini untuk konsultasi awal, survei lokasi, dan estimasi biaya."
+        description="Silahkan hubungi kami untuk konsultasi kebutuhan proyek, survey lokasi, atau informasi lebih lanjut mengenai layanan konstruksi dan renovasi."
         imageSrc="/picture/kontak_kami.jpg"
         imageAlt="Hero banner kontak CV Nisfi Sabar"
       />
@@ -26,14 +26,13 @@ export default function ContactPage() {
             <Reveal className="dark-panel rounded-[32px] px-7 py-8 text-white sm:px-10">
               <p className="section-label">
                 <span className="lime-dot"></span>
-                Konsultasi Langsung
+                HUBUNGI KAMI
               </p>
               <h2 className="font-display mt-6 text-3xl font-semibold tracking-tight sm:text-5xl">
-                Ceritakan kebutuhan proyek Anda dan mulai dari percakapan yang sederhana.
+              Diskusikan kebutuhan proyek Anda bersama kami.
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
-                Kami siap membantu kebutuhan konstruksi, renovasi, utilitas, interior, dan landscape.
-                Hubungi kami untuk diskusi awal, survey, dan estimasi proyek.
+              Kami dapat membantu memberikan informasi awal terkait pekerjaan konstruksi, renovasi, interior, greenhouse, aluminium, dan kebutuhan bangunan lainnya.
               </p>
               <a
                 href={company.whatsappLink}
