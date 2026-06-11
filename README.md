@@ -1,4 +1,4 @@
-# CV. Daraka Wiguna Company Profile
+# darakawiguna
 
 Modern Next.js website with:
 - Company profile sections (Home, About Us, Services, Portfolio, Advantages, Contact)

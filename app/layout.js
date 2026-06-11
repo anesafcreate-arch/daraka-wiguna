@@ -21,7 +21,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata = {
-  title: company.name,
+  title: "darakawiguna",
   description: company.tagline,
 };
 
