@@ -9,7 +9,7 @@ export default function PortfolioPage() {
         title="Dokumentasi Beberapa Proyek Yang Telah Kami Kerjakan"
         description="Berikut beberapa dokumentasi pekerjaan konstruksi, renovasi, interior, dan layanan lainnya yang telah kami kerjakan sebagai referensi bagi client."
         imageSrc="/picture/portofolio_hero.jpg"
-        imageAlt="Hero banner portofolio CV Nisfi Sabar"
+        imageAlt="Hero banner portofolio CV. Daraka Wiguna"
       />
 
       <section className="py-16 sm:py-20">

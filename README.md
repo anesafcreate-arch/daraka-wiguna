@@ -1,4 +1,4 @@
-# CV. NISFI SABAR Company Profile
+# CV. Daraka Wiguna Company Profile
 
 Modern Next.js website with:
 - Company profile sections (Home, About Us, Services, Portfolio, Advantages, Contact)

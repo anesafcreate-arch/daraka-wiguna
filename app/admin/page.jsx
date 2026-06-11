@@ -117,7 +117,7 @@ export default function AdminPage() {
 
         <div className="mt-8 soft-panel rounded-[32px] p-6 sm:p-8">
           {status && (
-            <div className="mb-5 rounded-2xl border border-lime-200 bg-lime-50 px-4 py-3 text-sm text-lime-800">
+            <div className="brand-success-banner mb-5 rounded-2xl px-4 py-3 text-sm">
               {status}
             </div>
           )}
@@ -176,7 +176,7 @@ export default function AdminPage() {
                         <div className="flex flex-wrap gap-2">
                           <button
                             type="button"
-                            className="rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-700 transition hover:border-lime-300 hover:text-lime-700"
+                            className="rounded-full border border-[var(--line)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-700 transition hover:border-[#1591CC] hover:text-[#1591CC]"
                             onClick={() => updateRole(user.id)}
                             disabled={savingId === user.id}
                           >

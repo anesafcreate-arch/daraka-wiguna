@@ -1,15 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f5f2;
-  --foreground: #111827;
+  --background: #f7f8fb;
+  --foreground: #07111f;
   --card: #ffffff;
-  --muted: #5f6b7a;
-  --line: rgba(148, 163, 184, 0.22);
-  --accent: #8eba43;
-  --accent-dark: #6f9634;
-  --navy: #122033;
-  --navy-soft: #1a2b43;
+  --muted: #4d5a6f;
+  --line: #d9dee8;
+  --line-soft: rgba(217, 222, 232, 0.7);
+  --primary: #3b2de2;
+  --accent: #159bd3;
+  --secondary: #6d4cff;
+  --lavender: #d8d2ff;
+  --navy: #07111f;
+  --navy-soft: #070b2e;
+  --navy-mid: #10185a;
+  --charcoal-glass: rgba(15, 18, 28, 0.68);
+  --warm-balance: #c9bfae;
 }
 
 html {
@@ -18,15 +24,16 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(142, 186, 67, 0.1), transparent 22%),
-    linear-gradient(180deg, #f8f8f6 0%, #f2f3ef 100%);
+    radial-gradient(circle at top left, rgba(201, 191, 174, 0.12), transparent 24%),
+    radial-gradient(circle at top right, rgba(21, 155, 211, 0.08), transparent 20%),
+    linear-gradient(180deg, #f8fafc 0%, #f4f6fb 100%);
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
 }
 
 ::selection {
-  background: rgba(142, 186, 67, 0.22);
-  color: #0f172a;
+  background: rgba(59, 45, 226, 0.16);
+  color: var(--navy);
 }
 
 .font-display {
@@ -38,17 +45,18 @@ body {
 }
 
 .soft-panel {
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid var(--line);
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.07);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--line-soft);
+  box-shadow: 0 18px 45px rgba(7, 17, 31, 0.065);
 }
 
 .dark-panel {
   background:
-    radial-gradient(circle at top right, rgba(142, 186, 67, 0.16), transparent 20%),
-    linear-gradient(180deg, var(--navy-soft) 0%, var(--navy) 100%);
+    radial-gradient(circle at top right, rgba(109, 76, 255, 0.18), transparent 24%),
+    radial-gradient(circle at left center, rgba(21, 155, 211, 0.12), transparent 26%),
+    linear-gradient(135deg, #070b2e 0%, #10185a 55%, #24116d 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.2);
+  box-shadow: 0 30px 70px rgba(7, 17, 31, 0.22);
 }
 
 .section-label {
@@ -56,17 +64,90 @@ body {
 }
 
 .surface-label {
-  @apply inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-700;
+  @apply inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em];
+  border: 1px solid var(--line);
+  color: var(--navy);
+  box-shadow: 0 12px 24px rgba(7, 17, 31, 0.05);
 }
 
 .lime-dot {
   @apply inline-block h-2.5 w-2.5 rounded-full;
   background: var(--accent);
-  box-shadow: 0 0 0 5px rgba(142, 186, 67, 0.12);
+  box-shadow: 0 0 0 5px rgba(21, 155, 211, 0.12);
 }
 
 .accent-link {
   color: var(--accent);
+}
+
+.brand-primary-btn {
+  background: linear-gradient(135deg, #243bdb, var(--secondary));
+  color: #fff;
+  box-shadow: 0 18px 38px rgba(59, 45, 226, 0.18);
+}
+
+.brand-primary-btn:hover {
+  background: linear-gradient(135deg, #3043dd, #7a5bff);
+  box-shadow: 0 22px 42px rgba(59, 45, 226, 0.22);
+}
+
+.brand-secondary-btn {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(15, 18, 28, 0.18);
+  color: #fff;
+}
+
+.brand-secondary-btn:hover {
+  border-color: var(--accent);
+  background: rgba(15, 18, 28, 0.28);
+}
+
+.brand-outline-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--navy);
+  box-shadow: 0 12px 28px rgba(7, 17, 31, 0.06);
+}
+
+.brand-outline-btn:hover {
+  border-color: var(--accent);
+  color: var(--primary);
+}
+
+.brand-text-link {
+  color: var(--navy);
+}
+
+.brand-text-link:hover {
+  color: var(--primary);
+}
+
+.brand-icon-chip {
+  background: #eef7ff;
+  color: var(--accent);
+  border: 1px solid rgba(21, 155, 211, 0.12);
+  box-shadow: 0 12px 24px rgba(7, 17, 31, 0.05);
+}
+
+.brand-grid-card {
+  border: 1px solid var(--line-soft);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.brand-grid-card:hover {
+  border-color: rgba(109, 76, 255, 0.42);
+  box-shadow: 0 24px 48px rgba(7, 17, 31, 0.1);
+}
+
+.brand-info-tile {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 248, 251, 0.96));
+  border: 1px solid rgba(217, 222, 232, 0.92);
+}
+
+.brand-success-banner {
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  background: rgba(240, 253, 244, 0.96);
+  color: #166534;
 }
 
 .site-grid {
@@ -74,4 +155,18 @@ body {
     linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 34px 34px;
+}
+
+.construction-section {
+  background: linear-gradient(180deg, #f8fafc 0%, #f4f6fb 100%);
+}
+
+.construction-glass {
+  background: rgba(15, 18, 28, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+}
+
+.construction-footer-gradient {
+  background: linear-gradient(135deg, #070b2e 0%, #10185a 55%, #24116d 100%);
 }

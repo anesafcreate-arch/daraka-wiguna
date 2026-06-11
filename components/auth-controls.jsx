@@ -54,7 +54,7 @@ export default function AuthControls() {
     return (
       <Link
         href="/auth"
-        className="inline-flex items-center gap-2 rounded-full border border-lime-200 bg-lime-50 px-4 py-2 text-sm font-medium text-lime-700 transition hover:bg-lime-100"
+        className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[#f6f8ff] px-4 py-2 text-sm font-medium text-[var(--navy)] transition hover:border-[#1591CC] hover:text-[#1591CC]"
       >
         <Settings2 className="h-4 w-4" />
         Configure Supabase
@@ -70,7 +70,7 @@ export default function AuthControls() {
     return (
       <Link
         href="/auth"
-        className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-lime-300 hover:text-lime-700"
+        className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-[#1591CC] hover:text-[#1591CC]"
       >
         <LayoutDashboard className="h-4 w-4" />
         Login / Register
@@ -82,7 +82,7 @@ export default function AuthControls() {
     <div className="flex items-center gap-2">
       <Link
         href="/admin"
-        className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-lime-300 hover:text-lime-700"
+        className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-[#1591CC] hover:text-[#1591CC]"
       >
         <LayoutDashboard className="h-4 w-4" />
         Admin Panel

@@ -105,7 +105,7 @@ export default function AuthPage() {
                 <label className="block">
                   <span className="mb-2 block text-sm font-medium text-slate-700">Full Name</span>
                   <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3">
-                    <UserRound className="h-5 w-5 text-lime-700" />
+                    <UserRound className="h-5 w-5 text-[#1591CC]" />
                     <input
                       type="text"
                       value={fullName}
@@ -120,7 +120,7 @@ export default function AuthPage() {
               <label className="block">
                 <span className="mb-2 block text-sm font-medium text-slate-700">Email</span>
                 <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3">
-                  <Mail className="h-5 w-5 text-lime-700" />
+                  <Mail className="h-5 w-5 text-[#1591CC]" />
                   <input
                     type="email"
                     required
@@ -135,7 +135,7 @@ export default function AuthPage() {
               <label className="block">
                 <span className="mb-2 block text-sm font-medium text-slate-700">Password</span>
                 <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3">
-                  <LockKeyhole className="h-5 w-5 text-lime-700" />
+                  <LockKeyhole className="h-5 w-5 text-[#1591CC]" />
                   <input
                     type="password"
                     required
@@ -149,7 +149,7 @@ export default function AuthPage() {
               </label>
 
               <button
-                className="inline-flex w-full items-center justify-center rounded-full bg-lime-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-lime-700 disabled:opacity-60"
+                className="brand-primary-btn inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition disabled:opacity-60"
                 type="submit"
                 disabled={loading}
               >
@@ -158,7 +158,7 @@ export default function AuthPage() {
             </form>
 
             {message && (
-              <div className="mt-5 rounded-2xl border border-lime-200 bg-lime-50 px-4 py-3 text-sm text-lime-800">
+              <div className="brand-success-banner mt-5 rounded-2xl px-4 py-3 text-sm">
                 {message}
               </div>
             )}

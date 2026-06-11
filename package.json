@@ -1,8 +1,8 @@
 {
-  "name": "compro-cv.nisfi",
+  "name": "compro-daraka-wiguna",
   "version": "1.0.0",
   "private": true,
-  "description": "Company profile website for CV. NISFI SABAR with Supabase auth and admin management.",
+  "description": "Company profile website for CV. Daraka Wiguna with Supabase auth and admin management.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,7 +13,7 @@
     "supabase",
     "company-profile"
   ],
-  "author": "CV. NISFI SABAR",
+  "author": "CV. Daraka Wiguna",
   "license": "MIT",
   "dependencies": {
     "@supabase/ssr": "^0.10.2",

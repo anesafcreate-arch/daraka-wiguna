@@ -14,7 +14,7 @@ export default function MainNav() {
     <div className="flex items-center gap-3">
       <button
         type="button"
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 shadow-sm lg:hidden"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--line)] bg-white text-[var(--navy)] shadow-sm lg:hidden"
         onClick={() => setOpen((value) => !value)}
         aria-label="Toggle navigation"
       >
@@ -23,7 +23,7 @@ export default function MainNav() {
 
       <nav
         className={[
-          "absolute left-4 right-4 top-[calc(100%+12px)] rounded-3xl border border-slate-200 bg-white/95 p-3 shadow-2xl backdrop-blur lg:static lg:flex lg:items-center lg:gap-1 lg:rounded-full lg:border lg:border-slate-200 lg:bg-white lg:p-1 lg:shadow-sm",
+          "absolute left-4 right-4 top-[calc(100%+12px)] rounded-3xl border border-[var(--line)] bg-white/95 p-3 shadow-2xl backdrop-blur lg:static lg:flex lg:items-center lg:gap-1 lg:rounded-full lg:border lg:border-[var(--line)] lg:bg-white lg:p-1 lg:shadow-sm",
           open ? "block" : "hidden lg:flex",
         ].join(" ")}
       >
@@ -36,8 +36,8 @@ export default function MainNav() {
               className={[
                 "block rounded-full px-4 py-2 text-sm font-medium transition",
                 active
-                  ? "bg-slate-950 text-white"
-                  : "text-slate-700 hover:bg-lime-50 hover:text-lime-700",
+                  ? "bg-[linear-gradient(135deg,#243BDB,#6D4CFF)] text-white shadow-[0_12px_28px_rgba(59,45,226,0.18)]"
+                  : "text-slate-700 hover:border-[#D9DEE8] hover:bg-[#F7F8FB] hover:text-[#159BD3]",
               ].join(" ")}
               onClick={() => setOpen(false)}
             >
