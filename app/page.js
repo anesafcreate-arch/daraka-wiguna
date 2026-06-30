@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Building2, PanelsTopLeft, Quote, Star, Trees } from "lucide-react";
 import { motion } from "framer-motion";
 import { services } from "@/lib/site-data";
-import springTropis from "@/picture/spring_tropis.png";
+import springTropis from "@/picture/spring_tropis.jpg";
 
 const briefServices = [
   { title: services[0].title, text: services[0].description, icon: Building2 },

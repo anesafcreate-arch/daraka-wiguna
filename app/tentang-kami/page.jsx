@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import logoDarakaWiguna from "@/picture/logo-daraka-wiguna.jpg";
-import tentangKamiImage from "@/picture/tentang-kami.png";
-import visiMisiBgImage from "@/picture/visimisi_1.png";
+import tentangKamiImage from "@/picture/tentang-kami.jpg";
+import visiMisiBgImage from "@/picture/visimisi_1.jpg";
 import { company } from "@/lib/site-data";
 import styles from "./page.module.css";
 
