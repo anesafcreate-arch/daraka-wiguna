@@ -52,6 +52,18 @@ const clientLogos = [
     alt: "Logo PT. Reinsurance Nasional Indonesia",
     imgClassName: "h-24 sm:h-28",
   },
+  {
+    name: "PT Asuransi Kredit Indonesia",
+    src: "/clients/asuransi-kredit-indonesia.png",
+    alt: "Logo PT Asuransi Kredit Indonesia",
+    imgClassName: "h-24 sm:h-28",
+  },
+  {
+    name: "PT. Heksa Instrumen Sinergi",
+    src: "/clients/heksa-instrumen-sinergi.png",
+    alt: "Logo PT. Heksa Instrumen Sinergi",
+    imgClassName: "h-28 sm:h-32",
+  },
 ];
 
 export default function HomePage() {
