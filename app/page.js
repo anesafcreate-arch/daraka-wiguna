@@ -41,15 +41,15 @@ const heroHighlightsIndo = [
 
 const clientLogos = [
   {
-    name: "Heksa Instrumen Sinergi",
-    src: "/clients/heksa-instrumen-sinergi.png",
-    alt: "Logo Heksa Instrumen Sinergi",
+    name: "PT. Asrinda",
+    src: "/clients/pt-asrinda.png",
+    alt: "Logo PT. Asrinda",
     imgClassName: "h-28 sm:h-32",
   },
   {
-    name: "PT Asuransi Kredit Indonesia",
-    src: "/clients/asuransi-kredit-indonesia.png",
-    alt: "Logo PT Asuransi Kredit Indonesia",
+    name: "PT. Reinsurance Nasional Indonesia",
+    src: "/clients/pt-reinsurance-nasional-indonesia.png",
+    alt: "Logo PT. Reinsurance Nasional Indonesia",
     imgClassName: "h-24 sm:h-28",
   },
 ];

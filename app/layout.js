@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
-import AuthControls from "@/components/auth-controls";
 import MainNav from "@/components/main-nav";
 import SiteFooter from "@/components/site-footer";
 import WhatsAppFloat from "@/components/whatsapp-float";
@@ -48,7 +47,6 @@ export default function RootLayout({ children }) {
 
             <div className="flex items-center gap-3">
               <MainNav />
-              <AuthControls />
             </div>
           </div>
         </header>
