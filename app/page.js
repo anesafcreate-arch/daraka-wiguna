@@ -9,7 +9,7 @@ import springTropis from "@/picture/spring_tropis.jpg";
 const briefServices = [
   { title: services[0].title, text: services[0].description, icon: Building2 },
   { title: services[3].title, text: services[3].description, icon: PanelsTopLeft },
-  { title: services[8].title, text: services[8].description, icon: Trees },
+  { title: services[7].title, text: services[7].description, icon: Trees },
 ];
 
 const testimonials = [
@@ -29,7 +29,7 @@ const testimonials = [
     avatar: "B",
     name: "Bapak Hendra Gunawan",
     role: "Pengusaha - Bojong Gede",
-    text: "Kitchen set yang dibuat sangat bagus dan presisi. Material berkualitas dan finishing sempurna. Sangat merekomendasikan CV. Daraka Wiguna!",
+    text: "Renovasi kantor kami selesai tepat waktu dengan hasil yang rapi dan profesional. Tim sangat komunikatif dan detail dalam setiap pekerjaan. Sangat merekomendasikan CV. Daraka Wiguna!",
   },
 ];
 
