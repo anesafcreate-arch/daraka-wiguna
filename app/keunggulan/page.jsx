@@ -35,24 +35,6 @@ export default function AdvantagesPage() {
               );
             })}
           </div>
-
-          <Reveal delay={0.1} className="mt-8 soft-panel rounded-[32px] p-8 sm:p-10">
-            <p className="surface-label">
-              <span className="lime-dot"></span>
-              Ringkasan USP
-            </p>
-            <div className="mt-6 grid gap-6 lg:grid-cols-3">
-              {[
-                "Tim berpengalaman dengan komunikasi yang baik selama proyek berlangsung.",
-                "Pengerjaan dilakukan sesuai tahapan dan jadwal yang telah disepakati.",
-                "Material dan metode pengerjaan disesuaikan dengan kebutuhan proyek.",
-              ].map((item) => (
-                <div key={item} className="brand-info-tile rounded-3xl px-5 py-5 text-sm leading-7 text-slate-700">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </Reveal>
         </div>
       </section>
     </>
